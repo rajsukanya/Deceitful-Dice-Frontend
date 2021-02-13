@@ -25,6 +25,7 @@
             ],
             "styles": [
               "src/styles.css"
+              
             ],
             "scripts": []
           },
@@ -120,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "Deceitful"
+  "defaultProject": "Deceitful",
+  "cli": {
+    "analytics": false
+  }
 }
