@@ -1,2 +1,70 @@
-<p>game works!</p>
+<div class="split left">
+    <div class="centered">
+      <h2>Player 1</h2>
+      </div>
+    <div class="row">
+        <div class="column">
+          <img src="../assets/images/blue/one.png"  style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/blue/two.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/blue/three.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/blue/four.png" style="width:100%">
+          </div>
+        <div class="column">
+          <img src="../assets/images/blue/five.png" style="width:100%">
+        </div>
+        <br><br>
+       
+    </div>
+    <div class="buttons">
+        <!-- <button style="margin:5px;" class="btn btn-success">New Bet</button>
+        <button style="margin:5px;" class="btn btn-danger">Liar</button> -->
+        <label>Enter Number of Dice:</label>
+        <input type="text" id="pieces" name="pieces">
+        <br> 
+        <label>Pick Dice:</label>
+        <select name="dice" id="dice" style="margin:15px;">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+            <option value="four">Four</option>
+            <option value="five">Five</option>
+            <option value="six">Six</option>
+          </select>
+        <button class="btn btn-success">Place Bet</button>
+    </div>
+  
+</div>
+  
+  <div class="split right">
+    <div class="centered">
+      <h2>Player 2</h2>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="../assets/images/white/one.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/white/two.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/white/three.png" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="../assets/images/white/four.png" style="width:100%">
+          </div>
+        <div class="column">
+          <img src="../assets/images/white/five.png" style="width:100%">
+        </div>
+    </div>
+    <div class="buttons">
+        <label>Computer's Bet:</label>
+    </div>
+  </div>
+
 <router-outlet></router-outlet>
