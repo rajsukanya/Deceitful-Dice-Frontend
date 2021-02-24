@@ -1,1 +1,17 @@
-<h1></h1>
+<h1 *ngIf="(auth.isAuthenticated$ | async) === false" class="text-center text-white pt-5">Welcome To Deceitful Dice!</h1>
+
+<div class ="container" *ngIf="(auth.isAuthenticated$ | async) === false"> 
+    <p>Hello! Do you like lying to people?</p>
+    <p>Then you have come to the right place!</p>
+    <p>Deceitful Dice is the game for you!</p>
+    <p>Take turns trying to trick you opponent into calling you a liar!</p>
+    <p>Play against a computer opponent and see how your skills match up to them!</p>
+
+
+</div>
+
+<div class ="container" *ngIf="(auth.isAuthenticated$ | async) === true"> 
+    Instructions for playing the game
+
+
+</div>
