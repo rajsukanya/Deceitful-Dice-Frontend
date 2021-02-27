@@ -1,6 +1,9 @@
 <div class="split left">
-    <button style="margin:5px;" class="btn btn-success">Save Game</button>
-    <button class="btn btn-danger">Quit Game</button>
+    <button class="btn btn-danger" (click)="confirmBox()">Quit Game</button>
+    <!-- <button [swal]="['Oops!', 'This is not implemented yet :/', 'warning']">
+      
+      Do it!
+    </button> -->
     <div class="centered">
       <h2>Player 1</h2>
       </div>
@@ -26,19 +29,19 @@
     <div class="buttons">
         <!-- <button style="margin:5px;" class="btn btn-success">New Bet</button>
         <button style="margin:5px;" class="btn btn-danger">Liar</button> -->
-        <label>Enter Number of Dice:</label>
-        <input type="text" id="pieces" name="pieces">
+        <label>Enter Number of Dice: </label>
+        <input type="text" id="pieces" name="pieces" [(ngModel)]="betNumOfPieces">
         <br> 
         <label>Pick Dice:</label>
-        <select name="dice" id="dice" style="margin:15px;">
-            <option value="one">One</option>
-            <option value="two">Two</option>
-            <option value="three">Three</option>
-            <option value="four">Four</option>
-            <option value="five">Five</option>
-            <option value="six">Six</option>
+        <select name="dice" id="dice" style="margin:15px;" [(ngModel)]="betDice">
+            <option value=1>One</option>
+            <option value=2>Two</option>
+            <option value=3>Three</option>
+            <option value=4>Four</option>
+            <option value=5>Five</option>
+            <option value=6>Six</option>
           </select>
-        <button class="btn btn-success">Place Bet</button>
+        <button class="btn btn-success" (click)="placeBet()">Place Bet</button>
     </div>
   
 </div>
@@ -47,7 +50,8 @@
     <div class="centered">
       <h2>Player 2</h2>
     </div>
-    <div class="row">
+    <div *ngIf="liar === false"></div>
+    <div *ngIf="liar === true" class="row">
         <div class="column">
           <img src="../assets/images/white/one.png" style="width:100%">
         </div>

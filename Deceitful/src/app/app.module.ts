@@ -10,7 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { GameComponent } from './game/game.component';
 import { ScoreComponent } from './score/score.component';
 import { AuthModule } from '@auth0/auth0-angular';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { AuthModule } from '@auth0/auth0-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SweetAlert2Module.forRoot(),
+    FormsModule,
     AuthModule.forRoot({
       domain: 'dev-mbukza.us.auth0.com',
       clientId: '4DnD36ZhdiGORRDwpMzkk0UzOf2DUQT4'

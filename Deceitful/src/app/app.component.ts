@@ -19,4 +19,6 @@ export class AppComponent {
   logout(){
   this.auth.logout({returnTo: 'http://localhost:4200'});
   }
+  
+  
 }

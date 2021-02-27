@@ -11,7 +11,40 @@
 </div>
 
 <div class ="container" *ngIf="(auth.isAuthenticated$ | async) === true"> 
-    Instructions for playing the game
-
+    
+    <div class="split left">
+        Instructions for playing the game
+    <ul>
+        <li>Click on Menu and Start Game</li>
+        <li>Once a game starts, ten dice will be rolled.</li>
+        <li>Each player will start with five dice each.</li>
+        <li>The opponent's dice will be hidden from the other.</li>
+        <li>At the start of a turn, a player will place a bet.</li>
+        <li>A bet will consist of the number of dice and a single value of those dice.</li>
+        <li>The value of the dice will be from one to six.</li>
+        <li>The number of dice is the claim that those dice exist within the entire dice pool.</li>
+        <li>After making a bet, the opponent will have two choices:
+            <ol>
+                <li>Make a new higher bet.</li>
+                <li>Call your opponent a liar.</li>
+            </ol>
+        </li>
+    </ul>
+    </div>
+    <div class="split right">
+    <ul>
+        <li>To make a higher bet, the number of dice must be higher if the value stays the same.</li>
+        <li>Or the value must be at least one dice higher.</li>
+        <li>If a player is called a liar, the round is over and the bet is checked.</li>
+        <li>All the dice are shown to both players.</li>
+        <li>The number of dice in the bet is checked against the dice pool.</li>
+        <li>If the bet is at least equal to the dice in the pool, then that player wins that round. Otherwise, the betting player loses the round.</li>
+        <li>The loser of the round will lose a single piece of dice.</li>
+        <li>A new round starts and this continues until a player loses all of their dice.</li>
+        <li>You can save your game at anytime when quitting.</li>
+    </ul>
+    </div>
+    
+    
 
 </div>
