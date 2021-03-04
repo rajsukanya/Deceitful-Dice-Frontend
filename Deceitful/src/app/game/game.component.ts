@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { BetService } from '../service/bet.service';
 
 @Component({
   selector: 'app-game',
@@ -12,8 +13,12 @@ export class GameComponent implements OnInit {
   liar: boolean = false;
   betNumOfPieces: number = 3;
   betDice: number = 6;
+  computerNumOfPieces: number = 5;
 
-  constructor(private router:Router) { }
+  constructor(
+    private router:Router, 
+    private betService: BetService 
+    ) { }
 
   ngOnInit(): void {
   }
@@ -41,7 +46,8 @@ export class GameComponent implements OnInit {
   }
 
   placeBet(){
-
+    this.betService.sendBet(this.betNumOfPieces, this.betDice);
+    console.log("inside place bet");
   }
 
 }
